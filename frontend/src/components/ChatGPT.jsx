@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import '../css/chatgpt.css';
 
 function ChatGPT() {
     const [value, setValue] = useState('');
@@ -20,7 +20,6 @@ function ChatGPT() {
         try {
             const response = await fetch(`${localHost}`, options)
             const data = await response.json()
-            console.log(data)
             setMessage(data.choices[0]?.message.content)
         } catch (error) {
             console.error(error)
@@ -30,7 +29,7 @@ function ChatGPT() {
     return (
         <div className='chat-container'>
             <h1 className='title'>
-                ModoughGPT
+                Welcome to ModoughGPT
             </h1>
             <form className='form' onSubmit={handleSubmit}>
                 <div className='formDiv'>
@@ -44,8 +43,8 @@ function ChatGPT() {
                     />
                 </div>
             </form>
-            <div className='responseDiv'>
-                <div className={message ? 'responseText bg' : 'responseText '}>
+            <div className={message ? 'responseDiv bg' : 'responseDiv'}>
+                <div className='responseText'>
                     <p>{message || 'Ask me anything...'}</p>
                 </div>
 

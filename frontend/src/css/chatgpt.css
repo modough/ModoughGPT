@@ -1,0 +1,37 @@
+.chat-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.formDiv label {
+  font-size: 20px;
+  font-weight: 700;
+  color: cadetblue;
+}
+.formInput {
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 2px solid cadetblue;
+  background: transparent;
+  font-size: 15px;
+}
+.formInput::placeholder {
+  font-size: 15px;
+}
+.responseDiv.bg {
+  width: 50%;
+  background-color: cadetblue;
+}
+.responseText p {
+  padding: 10px 20px;
+  font-weight: 500;
+  line-height: 30px;
+}

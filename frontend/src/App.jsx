@@ -1,5 +1,5 @@
 
-import './App.css'
+import './css/app.css';
 import ChatGPT from './components/ChatGPT'
 
 function App() {
